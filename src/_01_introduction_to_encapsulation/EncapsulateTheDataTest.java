@@ -32,4 +32,14 @@ class EncapsulateTheDataTest {
 		e.setNomenclature("asdf");
 		assertEquals("asdf", e.getNomenclature());
 	}
+	
+	@Test
+	void testMemberObj() {
+		Object o = new Object();
+		e.setMemberObj(o);
+		assertEquals(o, e.getMemberObj());
+		String s = "";
+		e.setMemberObj(s);
+		assertEquals(o.getClass(), e.getMemberObj().getClass());
+	}
 }
