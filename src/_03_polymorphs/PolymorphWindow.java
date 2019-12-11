@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
 
@@ -13,7 +14,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-public class PolymorphWindow extends JPanel implements ActionListener, MouseMotionListener {
+public class PolymorphWindow extends JPanel implements ActionListener, MouseMotionListener, MouseListener{
 	public static final int WIDTH = 900;
 	public static final int HEIGHT = 600;
 
@@ -21,7 +22,7 @@ public class PolymorphWindow extends JPanel implements ActionListener, MouseMoti
 	private Timer timer;
 
 	ArrayList<Polymorph> polymorphs = new ArrayList<Polymorph>();
-	DialogPolymorph dialogmorph = new DialogPolymorph(90, 90);
+	DialogPolymorph dialogmorph = new DialogPolymorph(90, 120);
 
 	public static void main(String[] args) {
 		new PolymorphWindow().buildWindow();
@@ -78,5 +79,35 @@ public class PolymorphWindow extends JPanel implements ActionListener, MouseMoti
 		// TODO Auto-generated method stub
 		polymorphs.get(3).x = e.getX();
 		polymorphs.get(3).y = e.getY();
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }

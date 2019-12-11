@@ -27,7 +27,7 @@ public class DialogPolymorph extends Polymorph implements MouseListener{
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
 		if(e.getX() > x && e.getX() < x+super.getWidth() && e.getY() > y && e.getY() < y+super.getHeight()) {
-			JOptionPane.showMessageDialog(null, "hello");
+			JOptionPane.showMessageDialog(null, "hi");
 		}
 	}
 

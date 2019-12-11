@@ -16,7 +16,7 @@ public abstract class Polymorph {
     }
     
     public void update(){
-   	 
+    	
     }
     
     public int getX() {
