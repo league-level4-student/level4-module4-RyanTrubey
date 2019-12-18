@@ -6,15 +6,14 @@ public class Hospital {
 	private ArrayList<Doctor> doctors = new ArrayList<Doctor>();
 	private ArrayList<Patient> patients = new ArrayList<Patient>();
 
-	public void assignPatientsToDoctors() {
-		for(Patient p : patients) {
-			for(Doctor d : doctors) {
-				if(d.getPatients().size() < 3) {
-					try {
-						d.assignPatient(p);
-					} catch (DoctorFullException e) {
-					}
-				}
+	public void assignPatientsToDoctors(){
+		int i = 0;
+		for(int p = 0; p < patients.size(); p++) {
+			try {
+				doctors.get(i).assignPatient(patients.get(p));
+			} catch (DoctorFullException e) {
+				i++;
+				p--;
 			}
 		}
 	}

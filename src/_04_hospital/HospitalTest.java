@@ -110,6 +110,7 @@ assertTrue(testDoctor.getPatients().size() == 3);
 
 		// hospital assigns patients to doctors
 		testHospital.assignPatientsToDoctors();
+
 		// hospital.getDoctors shows doctors have 3, 3, 2 patients
 		List<Doctor> testDoctors = testHospital.getDoctors();
 		assertEquals(3, testDoctors.get(0).getPatients().size());
